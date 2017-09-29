@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>URL - TinyApp Example</title>
+  <%- include partials/_header.ejs %>
+</head>
+
+<body>
+  <h3>TinyURL for <%= longURL %></h3>
+
+  <a href="/u/<%= shortURL %>"><%= shortURL %></a>
+
+  <p>
+    <form action="/urls/<%= shortURL %>/delete" method="POST">
+      <button>Delete</button>
+    </form>
+  </p>
+
+  <form action="/urls/<%= shortURL %>" method="post">
+    <h3>Edit</h3>
+    <p>
+      <label>New URL:</label>
+      <input name="longURL" value="<%= longURL %>">
+      <input type="submit" value="Submit">
+    </p>
+  </form>
+
+</body>
+</html>

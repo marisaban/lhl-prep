@@ -1,0 +1,17 @@
+{
+  "name": "http-projects",
+  "version": "1.0.0",
+  "description": "LHL http week 2 projects",
+  "main": "main.js",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "maria isabel",
+  "license": "ISC"
+}

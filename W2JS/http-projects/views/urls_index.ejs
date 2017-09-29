@@ -1,0 +1,28 @@
+<!--
+- Want to display a list of URLs and their shortened forms
+- A link for shortening a new URL
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>URLs - TinyApp Example</title>
+  <%- include partials/_header.ejs %>
+</head>
+
+<body>
+    <h3>My URLs</h3>
+    <ul>
+      <% for(let url in urls) { %>
+        <li>
+          <strong><%= url %>:</strong>
+          <%= urls[url].longURL %>
+          <form action="/urls/<%= url %>/delete" method="POST">
+            <a href="/urls/<%= url %>">Edit</a>
+            <button>Delete</button>
+          </form>
+        </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
